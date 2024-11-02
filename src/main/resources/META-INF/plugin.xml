@@ -1,0 +1,30 @@
+<idea-plugin>
+  <id>dev.nordix.yt_integration</id>
+  <name>Nordix YT integration</name>
+  <depends>com.intellij.modules.platform</depends>
+  <description>
+    <![CDATA[
+      Integrates <b>Nordix</b> service to YouTrack time tracking
+    ]]>
+  </description>
+  <change-notes>
+    <![CDATA[
+      <ul>
+        <li><b>0.0.1</b>Initial build</li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <vendor url="https://nordix.dev">Nordix Solutions</vendor>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <postStartupActivity implementation = "dev.nordix.yt.domain.activity.NordixYtProjectActivity" />
+
+    <notificationGroup id="Nordix Notifications"
+                       displayType="BALLOON"
+                       isLogByDefault="false"
+                       toolWindowId="NordixWindow"/>
+
+  </extensions>
+
+</idea-plugin>
